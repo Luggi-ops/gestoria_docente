@@ -2,7 +2,7 @@
 :root{
     --font1: 'Montserrat', sans-serif;
     --font2: 'Open Sans', sans-serif;
-    --colorbrand: #de0b0a;
+    --colorbrand: #dd0a0a;
     --white: #ffffff;
     --black: #111111;
     --gray: #808080;
@@ -16,6 +16,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -49,26 +50,85 @@ h2{
     justify-content: space-between;
     align-items: center;
     background-color: var(--white);
-    display: none;
 }
+
+.header__menu{
+    position: fixed;
+    background-color: var(--black);
+    height: 100vh;
+    width: 100vw;
+    max-width: 40rem;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 0, 0 0, 0 99%, 0 100%);
+    transition: all .5s;
+    z-index: 1000;
+}
+
+
+.header__menu--open{
+    clip-path: polygon(0 0, 91% 0, 70% 100%, 0 100%);
+    transition: all .5s;
+}
+
 
 .header__logo img{
     width: 12rem;
 }
 
-.header__menu{
-    width: 50%;
-}
-
 .header__menu ul{
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     list-style: none;
+    height: 100vh;
 }
 
 .header__menu ul li a{
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
+}
+
+/*Btn para el navbar responsibe*/
+
+.btnNavbarContainer{
+    cursor: pointer;
+    margin-bottom: .5rem;
+}
+
+.btnNavbar, .btnNavbar::before, .btnNavbar::after{
+    content: ' ';
+    display: inline-block;
+    width: 3rem;
+    height: .5rem;
+    background-color: var(--black);
+    border-radius: .5rem;
+    position: relative;
+    transition: ease .5s;
+}
+
+.btnNavbar::before{
+    position: absolute;
+    top: 1rem;
+}
+
+.btnNavbar::after{
+    position: absolute;
+    top: -1rem;
+}
+
+.btnNavbarOpen{
+    transform: rotate(135deg);
+}
+
+.btnNavbarOpen::before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.btnNavbarOpen::after{
+    display: none;
 }
 
 /* hero */
@@ -81,11 +141,12 @@ h2{
     align-items: center;
     gap: 10rem;
     text-align: center;
-    background-image: linear-gradient(0deg, rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url(/assets/img/hero.jpg);
-    background-size: cover;
+    background-image: url(/assets/img/logo.png);
+    background-size: 50rem;
     background-position: center;
     background-attachment: fixed;
     color: var(--white);
+    background-repeat: no-repeat;
 }
 
 .hero h2{
@@ -151,10 +212,17 @@ h2{
     margin: 3rem 0;
 }
 
+.servicios__list{
+    background-color: var(--colorbrand);
+    padding: 2rem;
+    border-radius: 4rem;
+    color: var(--white);
+}
 
 
 .servicios__list ul{
     list-style: none;
+    
 }
 
 .servicios__list ul li{
@@ -163,7 +231,7 @@ h2{
 
 .servicios__list ul li a{
     text-decoration: none;
-    color: var(--black)
+    color: var(--white)
 }
 
 .servicios__list .fa-chevron-right{
@@ -306,12 +374,12 @@ h2{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 15rem 0;
+    padding: 5rem 0;
 }
 
 .nosotros h2{
-    font-size: 6rem;
-    margin: 5rem 0;
+    font-size: 5rem;
+    margin: 5rem;
 }
 
 .nosotros__content{
@@ -358,6 +426,11 @@ h2{
     background: linear-gradient(to bottom, var(--black) 42%, var(--white) 42% 70%, var(--colorbrand) 70% );
 }
 
+.capacitaciones h2{
+    color: var(--white);
+    font-size: 5rem;
+    margin: 5rem;
+}
 
 .capacitaciones__img img{
     width: 100%;
@@ -382,8 +455,34 @@ h2{
     padding: 2rem;
     margin: 2rem;
     border-radius: 2rem;
+    position: relative;
+    min-height: 28rem;
 }
 
+.capacitaciones__card-text {
+    padding: 2rem 0;
+}
+
+.capacitaciones__consulta a{
+    text-decoration: none;
+    color: black;
+    font-size: 3rem;
+}
+
+.disabled::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #e2e2e2aa;
+    left: 0;
+    top: 0;
+    border-radius: 2rem;
+}
+
+.disabled:hover{
+    cursor: not-allowed;
+}
 /* contacto */
 
 .contacto{
@@ -402,6 +501,7 @@ h2{
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 5rem;
 }
 
 .contacto__text{
@@ -431,8 +531,17 @@ h2{
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
-    /* width: calc(100% - 30rem); */
 }
+
+@media screen and (min-width: 720px){
+    .contacto__container{
+        flex-direction: row;
+    }
+    .contacto__form{
+        width: calc(100% - 30rem);
+    }
+}
+
 
 .contacto__form input{
     width: 100%;
@@ -461,3 +570,19 @@ h2{
     gap: 2rem;
 }
 
+/* wsp fixed */
+
+.wspfixed{
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 5rem;
+    background-color: #00a884;
+    border-radius: 50%;
+    padding: .5rem 1.5rem;
+}
+
+.wspfixed a {
+    color: var(--white)
+    
+}

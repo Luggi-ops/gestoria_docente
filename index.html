@@ -24,40 +24,36 @@
         <nav class="header__menu">
             <ul>
                 <li>
-                    <a href="#">Servicios</a>
+                    <a href="#servicios">Servicios</a>
                 </li>
 
                 <li>
-                    <a href="#">Nosotros</a>
+                    <a href="#nosotros">Nosotros</a>
                 </li>
 
                 <li>
-                    <a href="#">Galería</a>
+                    <a href="#capacitaciones">Capacitaciones</a>
                 </li>
 
                 <li>
-                    <a href="#">Contacto</a>
+                    <a href="#contacto">Contacto</a>
                 </li>
             </ul>
         </nav>
+        <!-- <div class="btnNavbarContainer">
+            <i class="fas fa-bars"></i>
+        </div> -->
+        <div class="btnNavbarContainer">
+            <span class="btnNavbar">
+            </span>
+        </div>
     </header>
 
     <section class="hero">
-        <div>
-            <h1>Gestoría y asesoría docente</h1>
-        </div>
-        <div>
-            <h2>Nuestros servicios</h2>
-            <div class="hero__btn">
-                <a href="#">Servicio 1</a>
-                <a href="#">Servicio 2</a>
-                <a href="#">Servicio 3</a>
-                <a href="#">Servicio 4</a>
-            </div>
-        </div>
+
     </section>
 
-    <main class="servicios">
+    <main id="servicios" class="servicios container">
         <div class="servicios__content">
             <div class="servicios__text">
                 <h2>Nos especializamos en Gestoría y Asesoría Docente</h2>
@@ -245,7 +241,7 @@
         </div>
     </section>
 
-    <section class="nosotros">
+    <section class="nosotros" id="nosotros">
         <h2>Acerca de Nosotros</h2>
 
         <div class="nosotros__content">
@@ -276,66 +272,115 @@
         </div>
     </section>
 
-    <section class="capacitaciones">
+    <section class="capacitaciones" id="capacitaciones">
+        <h2>Capacitaciones</h2>
         <div class="capacitaciones__img">
             <img src="/assets/img/capacitaciones.jpg" alt="">
         </div>
 
         <div class="capacitaciones__cards-container">
-            <div class="capacitaciones__card">
+            <div class="capacitaciones__card disabled">
                 <div>
-                    <i class="fal fa-calendar-alt"></i>
-                    <h2>04 Marzo</h2>
+                    <h3>Llamados virtuales.</h3>
+                    <h3> <i class="fal fa-calendar-alt"></i> 04 Marzo</h3>
+                    <div class="capacitaciones__card-text">
+                        <p>Horario: 19:00 hs.</p>
+                        <p>Modalidad: virtual.</p>
+                        <p>Plataforma: meet</p>
+                    </div>
+                    <div class="capacitaciones__consulta">
+                        <p>Consultános: </p>
+                        <a href="">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="capacitaciones__card disabled">
                 <div>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <h3>GEM Padres.</h3>
+                    <h3> <i class="fal fa-calendar-alt"></i> 11 Marzo</h3>
+                    <div class="capacitaciones__card-text">
+                        <p>Horario: 21:00 hs.</p>
+                        <p>Modalidad: virtual.</p>
+                        <p>Plataforma: meet</p>
+                    </div>
+                    <div class="capacitaciones__consulta">
+                        <p>Consultános: </p>
+                        <a href="">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="capacitaciones__card disabled">
+                <div>
+                    <h3>GEM para directivos, primer módulo.</h3>
+                    <h3> <i class="fal fa-calendar-alt"></i> 18 Marzo</h3>
+                    <div class="capacitaciones__card-text">
+                        <p>Horario: 21:00 hs.</p>
+                        <p>Modalidad: virtual.</p>
+                        <p>Plataforma: meet</p>
+                    </div>
+                    <div class="capacitaciones__consulta">
+                        <p>Consultános: </p>
+                        <a href="">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <div class="capacitaciones__card">
                 <div>
-                    <i class="fal fa-calendar-alt"></i>
-                    <h2>24 Marzo</h2>
-                </div>
-                <div>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                </div>
-            </div>
-
-            <div class="capacitaciones__card">
-                <div>
-                    <i class="fal fa-calendar-alt"></i>
-                    <h2>04 Abril</h2>
-                </div>
-                <div>
-                    <p>
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+                    <h3>Uso del GEM general, docentes.</h3>
+                    <h3> <i class="fal fa-calendar-alt"></i> 25 Marzo</h3>
+                    <div class="capacitaciones__card-text">
+                        <p>Horario: 21:00 hs.</p>
+                        <p>Modalidad: virtual.</p>
+                        <p>Plataforma: meet</p>
+                    </div>
+                    <div class="capacitaciones__consulta">
+                        <p>Consultános: </p>
+                        <a href="">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="">
+                            <i class="fas fa-envelope-square"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contacto">
+    <section class="contacto" id="contacto">
         <div class="contacto__container">
             <div class="contacto__text">
                 <h2>¿Tenés alguna consulta?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur mollitia non dolorem nisi rerum voluptate rem tenetur nihil perferendis natus.</p>
+                <p>Queremos ayudarte y facilitarte las cosas, por eso, no dudes en escribirnos por nuestros medios de contacto o dejanos tu mensaje y te responderemos a la brevedad.</p>
 
                 <div class="contacto__rrss">
                     <a href="#">
                         <i class="fab fa-facebook"></i>
                     </a>
 
-                    <a href="#">
+                    <a href="https://www.instagram.com/gestoria.y.asesoria.docente/" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
 
-                    <a href="#">
+                    <a href="https://api.whatsapp.com/send?phone=542612168829&text=Hola%20Marcela!%20necesito%20asesoramiento..." target="_blank">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -368,6 +413,14 @@
     <footer class="footer">
 
     </footer>
+
+    <div class="wspfixed">
+        <a href="https://api.whatsapp.com/send?phone=542612168829&text=Hola%20Marcela!%20necesito%20asesoramiento..." target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
 </body>
 
 </html>
